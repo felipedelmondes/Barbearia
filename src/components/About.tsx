@@ -28,7 +28,7 @@ export default function About() {
               <Scissors className="h-32 w-32 rotate-12 text-gold/10" />
             </div>
           </div>
-          <div className="absolute -right-6 -top-6 rounded-2xl border border-gold/25 bg-charcoal px-6 py-5 shadow-xl">
+          <div className="absolute -top-4 right-0 rounded-2xl border border-gold/25 bg-charcoal px-5 py-4 shadow-xl sm:-right-6 sm:-top-6 sm:px-6 sm:py-5">
             <p className="font-display text-3xl text-gold">2012</p>
             <p className="text-xs uppercase tracking-wide text-smoke">
               Ano de fundação

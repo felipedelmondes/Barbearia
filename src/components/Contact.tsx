@@ -25,7 +25,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-[1.1fr_1fr]">
+        <div className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-[1.1fr_1fr]">
           <div className="flex flex-col justify-between rounded-[2rem] border border-gold/25 bg-gradient-to-br from-gold/10 via-charcoal to-charcoal p-10">
             <div>
               <MessageCircle className="h-10 w-10 text-gold" />
@@ -41,7 +41,7 @@ export default function Contact() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-bold uppercase tracking-wide text-ink shadow-lg shadow-gold/20 transition-transform hover:scale-105"
+              className="mt-8 inline-flex w-fit items-center gap-2 whitespace-nowrap rounded-full bg-gold px-6 py-4 text-sm font-bold uppercase tracking-wide text-ink shadow-lg shadow-gold/20 transition-transform hover:scale-105 sm:px-8"
             >
               <MessageCircle className="h-4 w-4" />
               Chamar no WhatsApp

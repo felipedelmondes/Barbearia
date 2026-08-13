@@ -46,13 +46,13 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-14 flex gap-10 border-t border-cream/10 pt-8">
+          <div className="mt-14 grid grid-cols-3 gap-4 border-t border-cream/10 pt-8 sm:flex sm:gap-10">
             {[
               ["12+", "Anos de ofício"],
               ["8.4k", "Clientes atendidos"],
               ["4.9", "Avaliação média"],
             ].map(([value, label]) => (
-              <div key={label}>
+              <div key={label} className="min-w-0">
                 <p className="font-display text-3xl text-gold">{value}</p>
                 <p className="text-xs uppercase tracking-wide text-smoke">
                   {label}

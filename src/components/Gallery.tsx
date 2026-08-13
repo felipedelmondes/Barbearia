@@ -1,12 +1,11 @@
-import { Scissors } from "lucide-react";
+import corte01 from "../assets/gallery/corte-01.jpeg";
+import corte02 from "../assets/gallery/corte-02.jpeg";
+import corte03 from "../assets/gallery/corte-03.jpeg";
 
 const TILES = [
-  { size: "row-span-2", label: "Corte & degradê" },
-  { size: "", label: "Barba desenhada" },
-  { size: "", label: "Ambiente" },
-  { size: "row-span-2", label: "Navalha" },
-  { size: "", label: "Finalização" },
-  { size: "", label: "Produtos" },
+  { src: corte01, label: "Degradê baixo", size: "row-span-2" },
+  { src: corte02, label: "Topete com risco", size: "" },
+  { src: corte03, label: "Textura curta", size: "" },
 ];
 
 export default function Gallery() {
@@ -22,17 +21,20 @@ export default function Gallery() {
           </h2>
         </div>
 
-        <div className="mt-16 grid auto-rows-[10rem] grid-cols-2 gap-4 sm:grid-cols-3">
-          {TILES.map((tile, i) => (
+        <div className="mt-16 grid auto-rows-[13rem] grid-cols-2 gap-4 sm:auto-rows-[15rem]">
+          {TILES.map((tile) => (
             <div
-              key={i}
-              className={`group relative overflow-hidden rounded-2xl border border-cream/10 bg-gradient-to-br from-charcoal-light to-charcoal ${tile.size}`}
+              key={tile.label}
+              className={`group relative overflow-hidden rounded-2xl border border-cream/10 ${tile.size}`}
             >
-              <div className="absolute inset-0 flex items-center justify-center opacity-20 transition-opacity duration-300 group-hover:opacity-40">
-                <Scissors className="h-10 w-10 text-gold" />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/0 to-ink/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <span className="absolute bottom-3 left-4 text-sm font-medium text-cream opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <img
+                src={tile.src}
+                alt={tile.label}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/10 to-ink/0" />
+              <span className="absolute bottom-3 left-4 text-sm font-medium text-cream">
                 {tile.label}
               </span>
             </div>

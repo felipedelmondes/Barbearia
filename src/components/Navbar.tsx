@@ -59,7 +59,7 @@ export default function Navbar() {
 
         <button
           aria-label="Abrir menu"
-          className="text-cream md:hidden"
+          className="-mr-2 flex h-11 w-11 items-center justify-center text-cream md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
